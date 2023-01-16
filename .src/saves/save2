@@ -1,0 +1,21 @@
+io.write("Enter the password that you want to save: ")
+
+local input = io.read()
+
+local file = io.open(os.date("password_%M_%D_%Y_%H_%M_%S.txt"), "w")
+
+if file then
+
+    file:write(input)
+
+file:close()
+print("Password was saved")
+print("Go to the files, and then you will see a .txt file. Press on that to see the saved password.")
+
+else
+    print("There was a error please try again.")
+    
+end
+
+
+-- have a if a way to have the user learn why that the .txt file might not be there
